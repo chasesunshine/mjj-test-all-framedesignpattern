@@ -1,10 +1,6 @@
-package com.mashibing.spring01.demo01;
+package com.mashibing.spring01.demo01.beanfactory;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.support.BeanDefinitionReader;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
 
 import java.util.List;
 

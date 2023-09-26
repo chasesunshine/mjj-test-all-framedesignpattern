@@ -1,4 +1,4 @@
-package com.mashibing.spring01.demo02;
+package com.mashibing.spring01.demo02.factorybean;
 
 /**
  * @author spikeCong

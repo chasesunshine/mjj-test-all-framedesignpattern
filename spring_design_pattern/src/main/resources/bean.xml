@@ -14,11 +14,11 @@
         http://www.springframework.org/schema/task
         http://www.springframework.org/schema/task/spring-task-4.2.xsd">
 
-    <bean id="user" class="com.mashibing.spring01.demo01.User">
+    <bean id="user" class="com.mashibing.spring01.demo01.beanfactory.User">
         <property name="friends" ref="userFriends"></property>
     </bean>
 
-    <bean id="userFriends" class="com.mashibing.spring01.demo01.Friends">
+    <bean id="userFriends" class="com.mashibing.spring01.demo01.beanfactory.Friends">
         <property name="names">
             <list>
                 <value>"LiLi"</value>
