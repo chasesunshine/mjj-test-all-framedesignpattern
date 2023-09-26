@@ -1,0 +1,12 @@
+com\mashibing\framework\beans\PropertyValue.class
+com\mashibing\framework\beans\factory\BeanFactory.class
+com\mashibing\framework\beans\factory\support\BeanDefinitionReader.class
+com\mashibing\framework\utils\SpringUtils.class
+com\mashibing\framework\context\support\AbstractApplicationContext.class
+com\mashibing\framework\beans\BeanDefinition.class
+com\mashibing\framework\beans\factory\support\SimpleBeanDefinitionRegistry.class
+com\mashibing\framework\context\ApplicationContext.class
+com\mashibing\framework\beans\factory\support\BeanDefinitionRegistry.class
+com\mashibing\framework\beans\MutablePropertyValues.class
+com\mashibing\framework\context\support\ClassPathXmlApplicationContext.class
+com\mashibing\framework\beans\factory\xml\XmlBeanDefinitionReader.class
