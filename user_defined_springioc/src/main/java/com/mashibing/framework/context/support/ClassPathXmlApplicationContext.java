@@ -10,6 +10,11 @@ import com.mashibing.framework.utils.SpringUtils;
 import java.lang.reflect.Method;
 
 /**
+ * 该类主要是加载类路径下的配置文件，并进行bean对象的创建，主要完成以下功能：
+ *  在构造方法中，创建BeanDefinitionReader对象。
+ *  在构造方法中，调用refresh()方法，用于进行配置文件加载、创建bean对象并存储到容器中。
+ *  重写父接口中的getBean()方法，并实现依赖注入操作。
+ *
  * IOC容器具体的子实现类,加载XML格式的配置文件
  * @author spikeCong
  * @date 2022/10/28
@@ -17,19 +22,15 @@ import java.lang.reflect.Method;
 public class ClassPathXmlApplicationContext extends AbstractApplicationContext{
 
     public ClassPathXmlApplicationContext(String configLocation) {
-
         this.configLocation = configLocation;
-
         //构建解析器对象,指定具体解析类为XML
         this.beanDefinitionReader = new XmlBeanDefinitionReader();
-
         this.refresh();
     }
 
     //根据bean的对象名称获取bean对象
     @Override
     public Object getBean(String name) throws Exception {
-
         //判断对象容器中是否包含指定名称的bean对象,有就返回,没有则创建
         Object obj = singletonObjects.get(name);
         if(obj != null){

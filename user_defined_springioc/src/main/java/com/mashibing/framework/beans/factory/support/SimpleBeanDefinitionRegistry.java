@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * SimpleBeanDefinitionRegistry类, 该类实现了BeanDefinitionRegistry接口，
+ * 定义了Map集合作为注册表容器。
+ *
  * @author spikeCong
  * @date 2022/10/28
  **/

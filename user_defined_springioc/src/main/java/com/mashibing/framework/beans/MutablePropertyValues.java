@@ -6,22 +6,22 @@ import java.util.List;
 
 /**
  * 该类用来存储和遍历多个PropertyValue对象
+ *
  * @author spikeCong
  * @date 2022/10/27
  **/
 public class MutablePropertyValues implements Iterable<PropertyValue>{
-
     //定义一个集合,存储PropertyValue
     private final List<PropertyValue> propertyValueList;
 
     public MutablePropertyValues() {
-        this.propertyValueList = new ArrayList<PropertyValue>();
+        this.propertyValueList = new ArrayList<>();
     }
 
     //有参构造 接收一个外部传入的list,赋值给propertyValueList属性
     public MutablePropertyValues(List<PropertyValue> propertyValueList) {
         if(propertyValueList == null){
-            this.propertyValueList = new ArrayList<PropertyValue>();
+            this.propertyValueList = new ArrayList<>();
         }else{
             this.propertyValueList = propertyValueList;
         }
@@ -37,7 +37,6 @@ public class MutablePropertyValues implements Iterable<PropertyValue>{
 
     //获取所有的PropertyValue
     public PropertyValue[] getPropertyValues(){
-
         return propertyValueList.toArray(new PropertyValue[0]);
     }
 

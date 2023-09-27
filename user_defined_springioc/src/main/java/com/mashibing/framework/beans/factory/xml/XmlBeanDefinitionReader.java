@@ -14,12 +14,12 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
+ * - XmlBeanDefinitionReader是专门用来解析xml配置文件的。该类实现BeanDefinitionReader接口并实现接口中的两个功能。
  * 该类是对XML文件进行解析的具体类
  * @author spikeCong
  * @date 2022/10/28
  **/
 public class XmlBeanDefinitionReader implements BeanDefinitionReader {
-
     //声明注册表对象
     private BeanDefinitionRegistry registry;
 
@@ -34,25 +34,19 @@ public class XmlBeanDefinitionReader implements BeanDefinitionReader {
 
     @Override
     public void loadBeanDefinitions(String configLocation) throws Exception {
-
         //使用Dom4j解析XML
         SAXReader reader = new SAXReader();
-
         //获取指向配置文件的输入流
         InputStream is = XmlBeanDefinitionReader.class.getClassLoader().getResourceAsStream(configLocation);
-
         //文档对象
         Document document = reader.read(is);
-
         //获取根标签
         Element rootElement = document.getRootElement();
-
         //解析bean标签
         parseBean(rootElement);
     }
 
     private void parseBean(Element rootElement) {
-
         //获取所有的bean标签
         List<Element> elements = rootElement.elements();
 
@@ -68,7 +62,6 @@ public class XmlBeanDefinitionReader implements BeanDefinitionReader {
 
             //获取property
             List<Element> elementList = element.elements("property");
-
             MutablePropertyValues mutablePropertyValues = new MutablePropertyValues();
 
             for (Element property : elementList) {

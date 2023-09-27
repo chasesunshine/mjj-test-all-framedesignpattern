@@ -4,6 +4,9 @@ import com.mashibing.framework.beans.BeanDefinition;
 
 /**
  * 注册表对象
+ * BeanDefinition对象存取的操作,
+ * 其实是在BeanDefinitionRegistry接口中定义的,
+ * 它被称为是BeanDefinition的注册中心.
  * @author spikeCong
  * @date 2022/10/28
  **/

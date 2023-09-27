@@ -1,5 +1,9 @@
 package com.mashibing.framework.beans;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * 该类用来封装Bean标签下的property子标签属性
  *      1.name属性
@@ -8,6 +12,9 @@ package com.mashibing.framework.beans;
  * @author spikeCong
  * @date 2022/10/27
  **/
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class PropertyValue {
 
     private String name;
@@ -15,39 +22,6 @@ public class PropertyValue {
     private String ref;
 
     private String value;
-
-    public PropertyValue() {
-    }
-
-    public PropertyValue(String name, String ref, String value) {
-        this.name = name;
-        this.ref = ref;
-        this.value = value;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getRef() {
-        return ref;
-    }
-
-    public void setRef(String ref) {
-        this.ref = ref;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 
     @Override
     public String toString() {
