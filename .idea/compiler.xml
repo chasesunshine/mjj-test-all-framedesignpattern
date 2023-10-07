@@ -10,6 +10,7 @@
         <module name="springioc_test" />
         <module name="spring_design_pattern" />
         <module name="user_defined_springioc" />
+        <module name="mybatis_design_pattern" />
       </profile>
     </annotationProcessing>
   </component>

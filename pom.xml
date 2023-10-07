@@ -12,6 +12,7 @@
         <module>spring_design_pattern</module>
         <module>user_defined_springioc</module>
         <module>springioc_test</module>
+        <module>mybatis_design_pattern</module>
     </modules>
 
     <properties>

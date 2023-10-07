@@ -1,0 +1,13 @@
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `birthday` datetime DEFAULT NULL,
+  `sex` varchar(1) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `mybatis_test`.`user`(`id`, `username`, `birthday`, `sex`, `address`) VALUES (1, 'tom', '2023-10-18 15:30:00', '0', '北京');
+INSERT INTO `mybatis_test`.`user`(`id`, `username`, `birthday`, `sex`, `address`) VALUES (2, 'jack', '2023-10-25 15:31:03', '1', '上海');
+INSERT INTO `mybatis_test`.`user`(`id`, `username`, `birthday`, `sex`, `address`) VALUES (3, 'lucy', '2023-10-23 15:31:54', '1', '广州');
