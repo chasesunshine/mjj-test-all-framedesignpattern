@@ -19,7 +19,19 @@ public class SpringTest {
         StudentBean studentBean = (StudentBean) context.getBean("&studentBean");
         studentBean.study();
 
+        // 这个会报错 因为 &studentBean 得到 FactoryBean本身 ，
+        // com.mashibing.spring01.demo02.factorybean.StudentBean cannot be cast to com.mashibing.spring01.demo02.factorybean.TeacherBean
+//        TeacherBean teacherBean1 = (TeacherBean) context.getBean("&studentBean");
+//        teacherBean1.teach();
+
+
+
         TeacherBean teacherBean = (TeacherBean) context.getBean("studentBean");
         teacherBean.teach();
+
+        // 这个会报错, 会调用 StudentBean 的 getObject()方法，
+        // com.mashibing.spring01.demo02.factorybean.TeacherBean cannot be cast to com.mashibing.spring01.demo02.factorybean.StudentBean
+//        StudentBean studentBean1 = (StudentBean) context.getBean("studentBean");
+//        studentBean1.study();
     }
 }
